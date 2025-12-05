@@ -1,0 +1,99 @@
+/* Basic Reset & Global Styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Default Variables (Light Mode) */
+  --bg-color: #ffffff;
+  --text-color: #213547;
+  --card-bg: #f9f9f9;
+  --primary-color: #646cff;
+  --border-color: #e0e0e0;
+}
+
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+  --bg-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --card-bg: #1a1a1a;
+  --primary-color: #646cff;
+  --border-color: #333;
+}
+
+body {
+  margin: 0;
+  display: block;
+  /* Changed from flex/place-items: center to allow normal flow */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Home Page Styles */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.webtoon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.webtoon-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+}
+
+.webtoon-card:hover {
+  transform: translateY(-5px);
+}
+
+.webtoon-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.thumbnail-placeholder {
+  width: 100%;
+  height: 280px;
+  background: var(--border-color);
+  /* Use border color as placeholder bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #888;
+  overflow: hidden;
+}
+
+.webtoon-info {
+  padding: 1rem;
+}
+
+.webtoon-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.webtoon-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #aaa;
+}
