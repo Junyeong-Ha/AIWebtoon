@@ -63,7 +63,9 @@ export const webtoons = [
             {
                 id: 8,
                 image: "08_image.png",
-                dialogues: [],
+                dialogues: [
+                    { id: 1, audio: "08_voice_01.mp3" }
+                ],
                 sfx: "08_sfx.mp3"
             },
             {
@@ -201,8 +203,7 @@ export const webtoons = [
                 dialogues: [
                     { id: 1, audio: "26_voice_01.mp3" },
                     { id: 2, audio: "26_voice_02.mp3" }
-                ],
-                sfx: "26_sfx.mp3"
+                ]
             }
         ]
     }
